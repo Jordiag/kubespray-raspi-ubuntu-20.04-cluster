@@ -47,3 +47,5 @@ declare -a IPS=(192.168.1.5 192.168.1.7 192.168.1.9 192.168.1.4 192.168.1.6 192.
 *ansible-playbook --flush-cache -i inventory/mycluster/hosts.yaml --become --become-user=root remove-node.yml --extra-vars "node=pi4"*
 *kubectl get pods --all-namespaces -o wide*
 *kubectl get nodes -o wide***
+
+Executing "scale.yml" adding new PIs, leaves the new node in notReady status and even configured to use flannel complains with a couple of calico messages from masters.
